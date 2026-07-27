@@ -48,6 +48,7 @@ export default function Navbar() {
     }, [isMenuOpen])
 
     const navLinks = [
+        { name: 'BUY CAR - RENT CAR', href: '/buy-car-rent-car' },
         { name: 'OUR SERVICES', href: '/#services' },
         { name: 'ABOUT US', href: '/about' },
         { name: 'OUR FLEET', href: '/cars' },
