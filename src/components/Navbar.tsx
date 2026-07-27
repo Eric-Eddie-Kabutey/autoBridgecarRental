@@ -50,7 +50,7 @@ export default function Navbar() {
     const navLinks = [
         { name: 'BUY NOW - PAY LATER', href: '/buy-now-pay-later' },
         { name: 'OUR SERVICES', href: '/#services' },
-        { name: 'ABOUT US', href: '/about' },
+        { name: 'ABOUT US', href: '/about-us' },
         { name: 'OUR FLEET', href: '/cars' },
     ]
 
