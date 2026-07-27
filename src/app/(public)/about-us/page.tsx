@@ -6,6 +6,8 @@ import Outlook from "@/components/about/Outlook";
 import Investors from "@/components/about/Investors";
 import TeamImageStrip from "@/components/about/TeamImageStrip";
 import Clients from "@/components/about/Clients";
+import { ImageCarousel } from "@/components/about/ImageCarousel";
+import CareersCTA from "@/components/about/CareersCTA";
 
 export default function AboutUsPage() {
     return (<>
@@ -17,5 +19,7 @@ export default function AboutUsPage() {
         <Investors />
         <TeamImageStrip />
         <Clients />
+        <ImageCarousel />
+        <CareersCTA />
     </>)
 }
