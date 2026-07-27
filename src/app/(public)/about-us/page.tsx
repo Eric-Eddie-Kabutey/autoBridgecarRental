@@ -1,0 +1,21 @@
+import Founders from "@/components/about/Founders";
+import HeroSection from "@/components/about/hero";
+import AboutSection from "@/components/about/WhatWeDo";
+import History from "@/components/about/History";
+import Outlook from "@/components/about/Outlook";
+import Investors from "@/components/about/Investors";
+import TeamImageStrip from "@/components/about/TeamImageStrip";
+import Clients from "@/components/about/Clients";
+
+export default function AboutUsPage() {
+    return (<>
+        <HeroSection />
+        <AboutSection />
+        <Founders />
+        <History />
+        <Outlook />
+        <Investors />
+        <TeamImageStrip />
+        <Clients />
+    </>)
+}
