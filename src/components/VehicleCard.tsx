@@ -7,6 +7,7 @@ export interface Vehicle {
     id: string
     brand: string
     model: string
+    listingType: string
     year: number
     transmission: string
     fuelType: string
