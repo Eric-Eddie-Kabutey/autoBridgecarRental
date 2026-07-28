@@ -1,5 +1,5 @@
 import Founders from "@/components/about/Founders";
-import HeroSection from "@/components/about/hero";
+import AboutUsHero from "@/components/about/AboutUsHero";
 import AboutSection from "@/components/about/WhatWeDo";
 import History from "@/components/about/History";
 import Outlook from "@/components/about/Outlook";
@@ -11,7 +11,7 @@ import TestimonialCarousel from "@/components/about/TestimonialCarousel";
 
 export default function AboutUsPage() {
     return (<>
-        <HeroSection />
+        <AboutUsHero />
         <AboutSection />
         <Founders />
         <History />
