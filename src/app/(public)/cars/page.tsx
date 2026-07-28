@@ -4,31 +4,35 @@ import { useState, useEffect, Suspense, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import VehicleCard, { Vehicle } from '@/components/VehicleCard'
 import { VehicleService } from '@/services/vehicle-service'
-import { Search, SlidersHorizontal, ChevronDown, RefreshCw, X, Filter } from 'lucide-react'
+import { Search, SlidersHorizontal, ChevronDown, RefreshCw, X } from 'lucide-react'
 
 function CarsContent() {
-    const [vehicles, setVehicles] = useState<Vehicle[]>([])
-    const [filteredVehicles, setFilteredVehicles] = useState<any[]>([])
+    const [ vehicles, setVehicles ] = useState<Vehicle[]>([])
+    const [ filteredVehicles, setFilteredVehicles ] = useState<any[]>([])
     const gridRef = useRef<HTMLDivElement>(null)
-    const [loading, setLoading] = useState(true)
+    const [ loading, setLoading ] = useState(true)
+
+    // Category Tabs
+    const [ activeCategory, setActiveCategory ] = useState<string>('rent')
 
     // Filters
-    const [searchTerm, setSearchTerm] = useState('')
-    const [selectedBrand, setSelectedBrand] = useState<string>('all')
-    const [selectedBodyType, setSelectedBodyType] = useState<string>('all')
-    const [selectedTransmission, setSelectedTransmission] = useState<string>('all')
-    const [selectedFuelType, setSelectedFuelType] = useState<string>('all')
-    const [selectedSeats, setSelectedSeats] = useState<string>('all')
-    const [priceRange, setPriceRange] = useState<number>(10000)
-    const [isFilterOpen, setIsFilterOpen] = useState(false)
+    const [ searchTerm, setSearchTerm ] = useState('')
+    const [ selectedBrand, setSelectedBrand ] = useState<string>('all')
+    const [ selectedBodyType, setSelectedBodyType ] = useState<string>('all')
+    const [ selectedTransmission, setSelectedTransmission ] = useState<string>('all')
+    const [ selectedFuelType, setSelectedFuelType ] = useState<string>('all')
+    const [ selectedSeats, setSelectedSeats ] = useState<string>('all')
+    const [ priceRange, setPriceRange ] = useState<number>(10000)
+    const [ isFilterOpen, setIsFilterOpen ] = useState(false)
 
     // Sort
-    const [sortBy, setSortBy] = useState<string>('id')
+    const [ sortBy, setSortBy ] = useState<string>('id')
 
     const searchParams = useSearchParams()
 
     // Handle search query and other filters from URL
     useEffect(() => {
+        const category = searchParams.get('listingType')
         const search = searchParams.get('search')
         const brand = searchParams.get('brand')
         const bodyType = searchParams.get('bodyType')
@@ -36,13 +40,16 @@ function CarsContent() {
         const fuelType = searchParams.get('fuelType')
         const seats = searchParams.get('seats')
 
+        if (category && [ 'rent', 'sale', 'lease' ].includes(category.toLowerCase())) {
+            setActiveCategory(category.toLowerCase())
+        }
         if (search) setSearchTerm(search)
         if (brand && brand !== 'all') setSelectedBrand(brand)
         if (bodyType && bodyType !== 'all') setSelectedBodyType(bodyType)
         if (transmission && transmission !== 'all') setSelectedTransmission(transmission)
         if (fuelType && fuelType !== 'all') setSelectedFuelType(fuelType)
         if (seats && seats !== 'all') setSelectedSeats(seats)
-    }, [searchParams])
+    }, [ searchParams ])
 
     // Fetch vehicles (Static)
     useEffect(() => {
@@ -69,9 +76,14 @@ function CarsContent() {
 
     // Apply filters and sort
     useEffect(() => {
-        let result = [...vehicles]
+        let result = [ ...vehicles ]
 
-        // 1. Filter
+        // 1. Filter by Category (Rent, Sale, Lease)
+        if (activeCategory) {
+            result = result.filter(v => v.listingType?.toLowerCase() === activeCategory)
+        }
+
+        // 2. Filter by Sidebar Attributes
         if (searchTerm) {
             const term = searchTerm.toLowerCase()
             result = result.filter(v =>
@@ -99,7 +111,7 @@ function CarsContent() {
         }
         result = result.filter(v => (v.prices?.kombo ?? 0) <= priceRange)
 
-        // 2. Sort
+        // 3. Sort
         switch (sortBy) {
             case 'price-asc':
                 result.sort((a, b) => (a.prices?.kombo ?? 0) - (b.prices?.kombo ?? 0))
@@ -118,7 +130,7 @@ function CarsContent() {
         }
 
         setFilteredVehicles(result)
-    }, [searchTerm, selectedBrand, selectedBodyType, selectedTransmission, selectedFuelType, selectedSeats, priceRange, sortBy, vehicles])
+    }, [ searchTerm, selectedBrand, selectedBodyType, selectedTransmission, selectedFuelType, selectedSeats, priceRange, sortBy, vehicles, activeCategory ])
 
     const clearFilters = () => {
         setSearchTerm('')
@@ -130,6 +142,7 @@ function CarsContent() {
         setPriceRange(10000)
         setSortBy('id')
     }
+
     const scrollToResults = () => {
         gridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
@@ -277,7 +290,6 @@ function CarsContent() {
                             {/* Price Filter */}
                             <div className="mb-8 p-4 bg-gray-50 rounded-xl border border-gray-100">
                                 <div className="flex justify-between items-center">
-                                    {/* <label className="text-sm font-bold text-gray-900">Max Price</label> */}
                                     <span className="text-xs font-bold text-[#25D366]">GMD {priceRange.toLocaleString()}</span>
                                 </div>
                                 <input
@@ -308,10 +320,29 @@ function CarsContent() {
                     {/* Right Content - Grid */}
                     <main className="w-full lg:w-5/6">
 
+                        {/* Top Category Tabs */}
+                        <div className="flex bg-gray-200/60 p-1.5 rounded-xl mb-6 w-full max-w-lg">
+                            {[ 'Rent', 'Sale', 'Lease' ].map((tab) => {
+                                const isActive = activeCategory === tab.toLowerCase()
+                                return (
+                                    <button
+                                        key={tab}
+                                        onClick={() => setActiveCategory(tab.toLowerCase())}
+                                        className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all duration-200 ${isActive
+                                                ? 'bg-white text-black shadow-sm'
+                                                : 'text-gray-500 hover:text-gray-900 hover:bg-gray-200/50'
+                                            }`}
+                                    >
+                                        {tab}
+                                    </button>
+                                )
+                            })}
+                        </div>
+
                         {/* Top Bar */}
                         <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
                             <p className="text-gray-500 text-sm">
-                                Showing <span className="font-bold text-black">1</span> to <span className="font-bold text-black">{filteredVehicles.length}</span> of <span className="font-bold text-black">{vehicles.length}</span> Vehicles
+                                Showing <span className="font-bold text-black">{filteredVehicles.length > 0 ? 1 : 0}</span> to <span className="font-bold text-black">{filteredVehicles.length}</span> of <span className="font-bold text-black">{vehicles.filter(v => v.listingType?.toLowerCase() === activeCategory).length}</span> Vehicles
                             </p>
 
                             <div className="flex items-center gap-3">
@@ -360,6 +391,7 @@ function CarsContent() {
         </div>
     )
 }
+
 export default function CarsPage() {
     return (
         <Suspense fallback={
