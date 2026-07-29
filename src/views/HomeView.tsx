@@ -10,6 +10,7 @@ import HomeAbout from '@/components/HomeAbout'
 import ReviewsCarousel from '@/components/ReviewsCarousel'
 import FAQSection from '@/components/FAQSection'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
+import Investors from '@/components/shared/investors'
 
 interface HomeViewProps {
     vehicles: any[]
@@ -34,6 +35,8 @@ export default function HomeView({ vehicles, faqs, brands, testimonials }: HomeV
         <main className="min-h-screen relative">
             <HomePreloader key="home-video" onVideoReady={handleVideoReady} />
             <Hero key="home-hero" show={videoReady} onLoaded={handleHeroLoaded} />
+
+            <Investors />
 
             {heroLoaded && (
                 <>
