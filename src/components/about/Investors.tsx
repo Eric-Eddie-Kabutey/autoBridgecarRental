@@ -53,7 +53,7 @@ export default function Investors() {
                 {/* 1. Creandum */}
                 <motion.div variants={itemVariants} className="flex justify-center group cursor-pointer">
                     <div className="text-[#00B259] font-bold text-xl md:text-2xl tracking-[0.15em] uppercase group-hover:scale-105 transition-transform duration-300">
-                        Creandum
+                        DK Telecom
                     </div>
                 </motion.div>
 
@@ -61,10 +61,10 @@ export default function Investors() {
                 <motion.div variants={itemVariants} className="flex flex-col items-center justify-center group cursor-pointer">
                     <div className="flex flex-col items-center group-hover:scale-105 transition-transform duration-300">
                         <div className="text-[#E32128] font-black text-4xl md:text-[44px] leading-none tracking-tighter">
-                            HV
+                            GT
                         </div>
                         <div className="text-[#E32128] font-bold text-[8px] md:text-[9px] tracking-[0.25em] mt-1 uppercase">
-                            Capital
+                            Bank
                         </div>
                     </div>
                 </motion.div>
@@ -72,7 +72,7 @@ export default function Investors() {
                 {/* 3. Northzone */}
                 <motion.div variants={itemVariants} className="flex justify-center group cursor-pointer">
                     <div className="text-black font-serif font-bold text-2xl md:text-[28px] tracking-tight group-hover:scale-105 transition-transform duration-300">
-                        NORTHZONE
+                        NAFA
                     </div>
                 </motion.div>
 
@@ -84,7 +84,7 @@ export default function Investors() {
                             <path d="M12 25L18 0H24L18 25z M2 25L8 0H14L8 25z M22 25L28 0H34L28 25z M32 25L38 0H44L38 25z" fill="#C4D600" />
                         </svg>
                         <div className="text-black font-semibold text-lg md:text-xl tracking-tight leading-none">
-                            stripes
+                            Housing Gambia
                         </div>
                     </div>
                 </motion.div>
@@ -93,12 +93,12 @@ export default function Investors() {
                 <motion.div variants={itemVariants} className="flex flex-col items-center justify-center group cursor-pointer">
                     <div className="flex flex-col items-center w-full group-hover:scale-105 transition-transform duration-300">
                         <div className="text-[#F37021] font-serif text-[22px] md:text-[26px] leading-none mb-1">
-                            INSIGHT
+                            INSIDE
                         </div>
                         <div className="flex items-center w-full gap-2">
                             <div className="h-[1px] bg-gray-300 flex-1"></div>
                             <div className="text-gray-400 text-[6px] md:text-[7px] tracking-[0.2em] font-medium">
-                                PARTNERS
+                                TRADING
                             </div>
                             <div className="h-[1px] bg-gray-300 flex-1"></div>
                         </div>
