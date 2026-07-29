@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import gsap from 'gsap'
+import { Phone } from 'lucide-react' // Added for a polished button icon
 
 interface HeroProps {
     onLoaded?: () => void
@@ -13,7 +14,7 @@ export default function Hero({ onLoaded, show = true }: HeroProps) {
     const containerRef = useRef<HTMLDivElement>(null)
     const hasAnimated = useRef(false)
     const router = useRouter()
-    const [searchQuery, setSearchQuery] = useState('')
+    const [ searchQuery, setSearchQuery ] = useState('')
 
     useEffect(() => {
         if (show && !hasAnimated.current && containerRef.current) {
@@ -30,7 +31,7 @@ export default function Hero({ onLoaded, show = true }: HeroProps) {
                 }
             )
         }
-    }, [show, onLoaded])
+    }, [ show, onLoaded ])
 
     const handleSearch = () => {
         if (searchQuery.trim()) {
@@ -76,6 +77,21 @@ export default function Hero({ onLoaded, show = true }: HeroProps) {
                         SEARCH
                     </button>
                 </div>
+            </div>
+
+            {/* --- NEW: Floating CTA (Bottom Left Corner of the Component) --- */}
+            <div className="absolute bottom-6 left-6 z-50 bg-[#FFCC00] text-black p-6 rounded-xl shadow-2xl max-w-[280px]">
+                <p className="font-bold text-lg leading-tight mb-4 tracking-tight">
+                    Do you have a car for rent?
+                </p>
+                {/* Replace href with your actual phone number */}
+                <a
+                    href="tel:+2200000000"
+                    className="flex items-center justify-center gap-2 bg-black text-white px-5 py-3 rounded text-[14px] font-bold w-full hover:bg-gray-800 transition-all shadow-md hover:shadow-lg"
+                >
+                    <Phone className="w-4 h-4" />
+                    Call us now
+                </a>
             </div>
         </section>
     )
