@@ -44,20 +44,27 @@ export default function AboutSection() {
                     className="text-3xl md:text-4xl lg:text-[40px] text-black mb-8 md:mb-10 text-center tracking-tight"
                 >
                     {/* Note the font weight difference matching your design */}
-                    <span className="font-bold">What we do at </span>
-                    <span className="font-normal">CarOnSale</span>
+                    <span className="font-bold">What we do at</span>
+                    <span className="font-normal">AutoBridge</span>
                 </motion.h2>
 
                 <motion.p
                     variants={itemVariants}
                     className="text-base md:text-[17px] leading-[1.7] md:leading-[1.8] text-zinc-800 text-left w-full"
                 >
-                    CarOnSale is reshaping the B2B used car wholesale market with its trusted, transparent, and
-                    technology-driven platform infrastructure, empowering used car dealers across Europe. By
-                    collaborating with professional dealerships and leveraging cutting-edge technology,
-                    CarOnSale delivers the market&apos;s most seamless and efficient trading solutions. With offerings
-                    like price algorithms, guaranteed pricing, financing, and fulfillment services, CarOnSale ensures
-                    a smooth and transparent transaction experience for all involved parties.
+                    AutoBridge makes car ownership more accessible by helping individuals and
+                    businesses purchase vehicles through flexible financing options. Our goal is to
+                    remove financial barriers by offering an easy application process, affordable
+                    repayment plans, and a wide selection of quality vehicles.                                       
+                </motion.p>
+                <br />
+                <motion.p
+                    variants={itemVariants}
+                    className="text-base md:text-[17px] leading-[1.7] md:leading-[1.8] text-zinc-800 text-left w-full">
+                    Whether you’re buying your first car, expanding your business fleet, or
+                    upgrading your current vehicle, we’re here to help you every step of the way.
+                    At AutoBridge, we don’t just finance cars, we help enhance your car
+                    experience.
                 </motion.p>
             </motion.div>
         </section>

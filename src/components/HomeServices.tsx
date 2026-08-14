@@ -37,12 +37,12 @@ export default function HomeServices() {
                             <div className="absolute inset-0 bg-linear-to-b from-black/30 to-black z-0" />
 
                             <div className="relative z-10 container mx-auto px-6 text-center text-white">
-                                <h5 className="text-sm text-emerald-500 font-bold uppercase tracking-[0.2em] mb-2">Our Rental Services</h5>
-                                <h2 className="text-4xl md:text-6xl font-light mb-4 max-w-4xl capitalize mx-auto leading-tight ">
-                                    Explore The Gambia with <br></br> Easy Car Rental
+                                    <h5 className="text-sm text-emerald-500 font-bold uppercase tracking-[0.2em] mb-2">Our purchase on credit services</h5>
+                                    <h2 className="text-4xl md:text-6xl font-light mb-4 max-w-4xl capitalize mx-auto leading-tight ">
+                                        Enjoy driving your own car<br></br>  with Auto Bridge                                    
                                 </h2>
                                 <p className="text-gray-300 max-w-2xl mx-auto mb-4 capitalize font-light text-lg">
-                                    {content.intro?.summary || 'We specialize in Luxury Car hire across Gambia, creating complete Luxury experiences.'}
+                                        {content.intro?.summary || 'Choose your car today and repay through flexible monthly installments that fit your budget.'}
                                 </p>
                                 <Link
                                     href="/services"

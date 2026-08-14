@@ -7,33 +7,33 @@ import { motion, AnimatePresence } from "framer-motion";
 // In a real app, this might come from a CMS or props.
 const founders = [
     {
-        name: "Tom",
+        name: "Eric Kabutey",
         title: "Chief Executive Officer",
         image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1000&auto=format&fit=crop",
         bio: "Tom gained experience in investment banking, private equity and management consulting at Boston Consulting Group before co-founding COS in 2018 with Oguz, whom he met through a mutual friend, and his old friend Fabian. As CEO, Tom's investor mindset and strategic acumen are critical to navigating market dynamics and achieving COS' goals.",
         linkedin: "#",
     },
-    {
-        name: "Oguz",
-        title: "Chief Commercial Officer",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop",
-        bio: "Oguz brings years of sales expertise and commercial strategy to the table. He leads the commercial operations, focusing on building strong, lasting relationships with dealership partners across Europe and driving top-line growth for the platform.",
-        linkedin: "#",
-    },
-    {
-        name: "Max",
-        title: "Chief Operating Officer",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop",
-        bio: "Max oversees the daily operational functions of CarOnSale. With a strong background in logistics and process optimization, he ensures that the platform's fulfillment services, including the complex vehicle logistics, run seamlessly and efficiently.",
-        linkedin: "#",
-    },
-    {
-        name: "Fabian",
-        title: "Chief Technology Officer",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop",
-        bio: "Fabian is the technical visionary behind the platform. He leads the engineering teams to build scalable, secure, and innovative technological infrastructure, driving features like the proprietary price algorithms that set CarOnSale apart.",
-        linkedin: "#",
-    },
+    // {
+    //     name: "Oguz",
+    //     title: "Chief Commercial Officer",
+    //     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop",
+    //     bio: "Oguz brings years of sales expertise and commercial strategy to the table. He leads the commercial operations, focusing on building strong, lasting relationships with dealership partners across Europe and driving top-line growth for the platform.",
+    //     linkedin: "#",
+    // },
+    // {
+    //     name: "Max",
+    //     title: "Chief Operating Officer",
+    //     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop",
+    //     bio: "Max oversees the daily operational functions of CarOnSale. With a strong background in logistics and process optimization, he ensures that the platform's fulfillment services, including the complex vehicle logistics, run seamlessly and efficiently.",
+    //     linkedin: "#",
+    // },
+    // {
+    //     name: "Fabian",
+    //     title: "Chief Technology Officer",
+    //     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop",
+    //     bio: "Fabian is the technical visionary behind the platform. He leads the engineering teams to build scalable, secure, and innovative technological infrastructure, driving features like the proprietary price algorithms that set CarOnSale apart.",
+    //     linkedin: "#",
+    // },
 ];
 
 // --- Individual Card Component ---
@@ -129,8 +129,8 @@ export default function Founders() {
                     transition={{ duration: 0.6 }}
                     className="text-3xl md:text-4xl lg:text-[40px] text-black mb-16 text-center tracking-tight"
                 >
-                    <span className="font-bold">The founders </span>
-                    <span className="font-normal">of CarOnSale</span>
+                    <span className="font-bold">Founders</span>
+                    <span className="font-normal">of AutoBridge</span>
                 </motion.h2>
 
                 {/* Founders Grid */}

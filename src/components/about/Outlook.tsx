@@ -36,7 +36,7 @@ export default function Outlook() {
                     variants={textVariants}
                     className="text-3xl md:text-4xl lg:text-[40px] mb-20 md:mb-32 text-center tracking-tight"
                 >
-                    <span className="font-bold">2024 and beyond: </span>
+                    {/* <span className="font-bold">2024 and beyond: </span> */}
                     <span className="font-normal">Outlook into the future</span>
                 </motion.h2>
 
@@ -88,14 +88,9 @@ export default function Outlook() {
                         {/* Subtle separator line matching the design */}
                         <div className="w-full h-[1px] bg-slate-700 mb-8" />
                         <p className="text-[15px] md:text-base leading-[1.7] md:leading-[1.8] text-gray-200 font-medium">
-                            Our vision for CarOnSale is to become the premier pan-European managed B2B
-                            used car marketplace. Leveraging our market-leading technology platform,
-                            robust dealership partnerships across Europe, and exceptional team, we aim to
-                            scale further, targeting annual sales of 1 million used cars through our platform.
-                            By providing technology-based solutions tailored to our dealership partners&apos;
-                            needs, we strive to solve their day-to-day challenges and enhance their used
-                            car transaction experience. As a partner, not a competitor, we are committed to
-                            mutual growth, ensuring their success is our success.
+                            Our vision for AutoBridge is to become the most trusted vehicle financing company,
+                            empowering more people to achieve the dream of owning a car through simple,
+                            transparent, and reliable financing solutions.
                         </p>
                     </motion.div>
                 </div>
@@ -116,14 +111,9 @@ export default function Outlook() {
                         {/* Subtle separator line */}
                         <div className="w-full h-[1px] bg-slate-700 mb-8" />
                         <p className="text-[15px] md:text-base leading-[1.7] md:leading-[1.8] text-gray-200 font-medium">
-                            To achieve our ambitious goals, we will optimize our platform for high-volume
-                            customers, prioritizing trust, reliability, and speed. We plan to enhance the
-                            transaction experience by offering additional solutions, including vehicle intake,
-                            fintech services, logistics, operational services, and adjacent products. Data
-                            and AI-enabled solutions will further refine the used car transaction process.
-                            Looking ahead, CarOnSale aims to build a scalable and sustainable
-                            organization with a robust business model centered on cutting-edge
-                            technology, reflecting our commitment to growth and excellence.
+                            Our vision for AutoBridge is to become the most trusted vehicle financing company,
+                            empowering more people to achieve the dream of owning a car through simple,
+                            transparent, and reliable financing solutions.
                         </p>
                     </motion.div>
 

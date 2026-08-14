@@ -7,17 +7,27 @@ import { Badge } from "@/components/ui/badge";
 
 const paymentTerms = [
     {
-        days: "30 days",
+        days: "Down payment",
         description: "Ideal for quick resales",
         isPopular: false,
     },
     {
-        days: "60 days",
+        days: "Month 3",
         description: "Enough time to resell",
-        isPopular: true,
+        isPopular: false,
     },
     {
-        days: "90 days",
+        days: "6th month",
+        description: "Enough time to resell",
+        isPopular: false,
+    },
+    {
+        days: "9th month",
+        description: "Enough time to resell",
+        isPopular: false,
+    },
+    {
+        days: "Final deposit at month 12",
         description: "Maximum flexibility for larger inventories",
         isPopular: false,
     },
@@ -36,7 +46,8 @@ export default function PaymentTerms() {
                         <span className="font-extrabold">Select</span> your payment terms
                     </h2>
                     <div className="max-w-2xl text-sm md:text-base text-slate-600 leading-relaxed font-medium">
-                        <p>Flexible — tailored to your cash flow. By the way, all fees are clearly displayed before you book.</p>
+                        <p>Flexible — tailored to your cash flow. By the way, all fees are clearly displayed before you
+                            book.</p>
                         <p>No hidden costs.</p>
                     </div>
                 </div>
@@ -46,7 +57,7 @@ export default function PaymentTerms() {
                     {/* Horizontal Connecting Line (Desktop) */}
                     <div className="absolute top-8 left-[15%] right-[15%] h-[1px] bg-slate-500 hidden md:block" />
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-16 md:gap-4">
                         {paymentTerms.map((term, index) => (
                             <motion.div
                                 key={index}
