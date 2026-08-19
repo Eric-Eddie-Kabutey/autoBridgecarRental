@@ -64,22 +64,22 @@ export default function ServicesView({ pageContent, faqs }: ServicesViewProps) {
                 />
             </AnimateOnScroll>
 
-            <AnimateOnScroll animation="fade-in-up">
+            {/* <AnimateOnScroll animation="fade-in-up">
                 <ServiceDetailsBlock
                     id="chauffeur"
                     {...chauffeur}
                     theme="dark"
                     reverse
                 />
-            </AnimateOnScroll>
+            </AnimateOnScroll> */}
 
-            <AnimateOnScroll animation="fade-in-up">
+            {/* <AnimateOnScroll animation="fade-in-up">
                 <ServiceDetailsBlock
                     id="vip"
                     {...vip}
                     theme="light"
                 />
-            </AnimateOnScroll>
+            </AnimateOnScroll> */}
 
             <FAQSection faqs={faqs} />
         </main>

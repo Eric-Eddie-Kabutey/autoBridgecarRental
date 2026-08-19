@@ -25,11 +25,11 @@ export default function WhyUs({ dark = false }: WhyUsProps) {
             title: 'Trusted Service',
             desc: 'Fast booking and 24/7 assistance whenever you need help.'
         },
-        {
-            icon: '/whyUs/map-black.svg',
-            title: 'Car Rentals Available Across The Gambia',
-            desc: 'Convenient doorstep delivery anywhere in The Gambia.'
-        }
+        // {
+        //     icon: '/whyUs/map-black.svg',
+        //     title: 'Car Rentals Available Across The Gambia',
+        //     desc: 'Convenient doorstep delivery anywhere in The Gambia.'
+        // }
     ];
 
 
@@ -39,7 +39,7 @@ export default function WhyUs({ dark = false }: WhyUsProps) {
                 <h3 className={`text-4xl md:text-5xl font-light capitalize text-center mb-20 ${dark ? 'text-white' : 'text-black'}`}>
                     Why choose AutoBridge?
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
                     {features.map((feature, idx) => (
                         <AnimateOnScroll key={idx} animation="fade-in-up" delay={idx * 100}>
                             <div className="flex flex-col items-center">

@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import React from 'react'
 import ImageWithFallback from '@/components/ImageWithFallback'
@@ -9,6 +9,10 @@ import WhyUs from '@/components/WhyUs'
 import VIPSection from '@/components/VIPSection'
 import FAQSection from '@/components/FAQSection'
 import AnimateOnScroll from '@/components/AnimateOnScroll'
+import ReviewsCarousel from '@/components/ReviewsCarousel'
+
+import { VehicleService } from '@/services/vehicle-service'
+import { ContentService } from '@/services/content-service'
 
 interface AboutViewProps {
     brands: any[]
@@ -16,7 +20,14 @@ interface AboutViewProps {
     faqs: any[]
 }
 
-export default function AboutView({ brands, servicesData, faqs }: AboutViewProps) {
+export default async function AboutView({ brands, servicesData, faqs }: AboutViewProps) {
+    
+     const [vehicles, homePageContent] = await Promise.all([
+        VehicleService.getVehicles(),
+        ContentService.getHomePageContent()
+      ])
+    
+      const { testimonials, } = homePageContent
     return (
         <main className="bg-white min-h-screen text-black overflow-x-hidden">
             {/* Hero Section */}
@@ -94,6 +105,9 @@ export default function AboutView({ brands, servicesData, faqs }: AboutViewProps
 
             {/* VIP Number Plate Section */}
             <VIPSection />
+
+            {/*  */}
+            <ReviewsCarousel testimonials={testimonials} />
 
             {/* FAQ Section */}
             <FAQSection faqs={faqs} />
