@@ -26,8 +26,8 @@ export default function HomeAbout() {
                                 About Easy Car Rental
                             </span>
 
-                            <h2 className="text-4xl md:text-7xl font-light text-white uppercase mb-8 leading-tight">
-                                Affordable Rides.<br />Reliable Service.
+                            <h2 className="text-4xl md:text-7xl font-light text-white uppercase mb-8 leading-tight">                                
+                                Affordable Cars for <br /> Sale  in the Gambia
                             </h2>
 
                             <p className="text-gray-200 text-sm md:text-lg font-light max-w-3xl mb-10 leading-relaxed">
