@@ -43,7 +43,29 @@ const navData = [
     {
         name: 'OUR SERVICES',
         href: '/#services',
-        hasDropdown: false
+        hasDropdown: true,
+        dropdownData: {
+            desktopLayout: 'buyers',
+            sections: [
+                {
+                    heading: 'For Buyers',
+                    items: [
+                        { title: 'Vehicle Brands', desc: '', href: '/services' },
+                        { title: 'Purchaser Benefits', desc: '', href: '#' },
+                        { title: 'Buy Now, Pay Later', desc: '', href: '#' },
+                        { title: 'Rent', desc: '', href: '#' },
+                    ]
+                },
+                {
+                    heading: 'For Seller',
+                    items: [
+                        { title: 'Trade ins', desc: '', href: '/services' },
+                        { title: 'Sell my car', desc: '', href: '#' },
+                        { title: 'Glossary', desc: '', href: '#' },
+                    ]
+                }
+            ]
+        }
     },
     {
         name: 'ABOUT US',
@@ -58,17 +80,18 @@ const navData = [
                         { title: 'About us', desc: 'Find out more about CarOnSale!', href: '#' },
                         { title: 'Contact us', desc: 'Would you like to make a press inquiry?', href: '#' },
                         { title: 'Blog', desc: 'The CarOnSale Blog', href: '#' },
+                        {
+                            title: 'Career', desc: 'Become part of our team! (everything under the nav bar career should come inside career when you click on it.) ', href: '#' },
                     ]
                 },
                 {
-                    heading: 'Career - Become part of our team!',
+                    heading: 'Career',
                     items: [
-                        { title: 'Vehicle Inspector', desc: "CarOnSale launches auction platform for lease...", href: '#' },
-                        { title: 'Inside Sales Manager (m/f/d)', href: '#' },
-                        { title: 'Operations Manager (m/f/d)', href: '#' },
-                        { title: 'Account Manager (m/f/d)', href: '#' },
-                    ],
-                    action: { title: 'To all vacancies', href: '#' }
+                        { title: 'Become part of our team!', desc: "(everything under the nav bar career should come inside career when you click on it.)", href: '#' },
+                        // { title: 'Inside Sales Manager (m/f/d)', href: '#' },
+                        // { title: 'Operations Manager (m/f/d)', href: '#' },
+                        // { title: 'Account Manager (m/f/d)', href: '#' },
+                    ],                    
                 },
                 {
                     heading: 'Press',
@@ -323,6 +346,7 @@ export default function Navbar() {
                                 <div className="grid grid-cols-12">
                                     <div className="col-span-4 py-10 pl-10 pr-6">
                                         <MegaMenuHeader title={activeNav.dropdownData.sections[ 0 ].heading} />
+                                        
                                         {activeNav.dropdownData.sections[ 0 ].items.map((item) => (
                                             <MegaMenuItem key={item.title} {...item} />
                                         ))}
@@ -336,11 +360,11 @@ export default function Navbar() {
                                                 </Link>
                                             ))}
                                         </div>
-                                        {activeNav.dropdownData.sections[ 1 ].action && (
+                                        {/* {activeNav.dropdownData.sections[ 1 ].action && (
                                             <Link href={activeNav.dropdownData.sections[ 1 ].action.href} className="text-[14px] font-bold text-black hover:underline flex items-center gap-1">
                                                 {activeNav.dropdownData.sections[ 1 ].action.title} <ChevronRight className="w-4 h-4" />
                                             </Link>
-                                        )}
+                                        )} */}
                                     </div>
                                     <div className="col-span-4 bg-[#F8F9FA] py-10 px-8 border-l border-gray-200">
                                         <MegaMenuHeader title={activeNav.dropdownData.sections[ 2 ].heading} theme={activeNav.dropdownData.sections[ 2 ].theme} />
@@ -436,11 +460,11 @@ export default function Navbar() {
                                                                 )}
 
                                                                 {/* Section Specific Action (e.g., "To all vacancies") */}
-                                                                {section.action && (
+                                                                {/* {section.action && (
                                                                     <Link href={section.action.href} className="mt-6 text-[14px] font-bold text-black hover:underline flex items-center gap-1">
                                                                         {section.action.title} <ChevronRight className="w-4 h-4" />
                                                                     </Link>
-                                                                )}
+                                                                )} */}
 
                                                             </div>
                                                         ))}

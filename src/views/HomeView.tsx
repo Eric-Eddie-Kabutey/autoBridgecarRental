@@ -36,7 +36,7 @@ export default function HomeView({ vehicles, faqs, brands, testimonials }: HomeV
             <HomePreloader key="home-video" onVideoReady={handleVideoReady} />
             <Hero key="home-hero" show={videoReady} onLoaded={handleHeroLoaded} />
 
-            <Investors />
+            {/* <Investors /> */}
 
             {heroLoaded && (
                 <>

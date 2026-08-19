@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Lock, Trophy, ClipboardCheck, CarFront, CheckCircle2 } from "lucide-react";
+import { Lock, Trophy, ClipboardCheck, CarFront, CheckCircle2, CarIcon } from "lucide-react";
 
 // --- Data-Driven Architecture ---
 // We store standard JSX in the data object to easily handle bolding specific text 
@@ -11,11 +11,9 @@ const stepsData = [
     {
         id: 1,
         icon: Lock,
-        title: "Request a free activation",
+        title: "Browse Our Cars",
         details: [
-            'Under "My Purchases," click the "Unlock Now" button',
-            "Our payment service provider will perform a completely impartial check of your company information in just a few moments",
-            'Once the verification is complete, the service will be active in your account under "My Purchases"'
+            'Explore our range of quality vehicles and choose the one that best fits your needs and budget.'
         ],
         buttonText: "Enable Now",
         infoBox: (
@@ -27,11 +25,9 @@ const stepsData = [
     {
         id: 2,
         icon: Trophy,
-        title: "Win the auction & choose your payment terms",
+        title: "Submit Your Application",
         details: [
-            "Successfully bid on and win the vehicle auction of your choice",
-            "During the checkout process, select the 'Buy Now, Pay Later' option as your preferred payment method",
-            "Review the flexible payment terms offered and select the one that best fits your current cash flow needs"
+            "Complete our simple online application form and provide the required information and supporting documents"
         ],
         buttonText: "Go to Auctions",
         infoBox: null
@@ -39,11 +35,9 @@ const stepsData = [
     {
         id: 3,
         icon: ClipboardCheck,
-        title: "Confirm booking",
+        title: "Application Review",
         details: [
-            "Review the final transaction details including all fees and the agreed-upon deferred payment date",
-            "Digitally sign the financing agreement with a single click",
-            "Receive instant confirmation and your digital vehicle release documents"
+            "Our team will carefully review your application and contact you if any additional information is needed"
         ],
         buttonText: null,
         infoBox: null
@@ -51,11 +45,19 @@ const stepsData = [
     {
         id: 4,
         icon: CarFront,
-        title: "Pick up the vehicle & pay",
+        title: "Approval & Agreement",
         details: [
-            "Coordinate with the seller or use CarOnSale logistics to arrange the vehicle pickup",
-            "Take possession of your new inventory immediately without tying up capital",
-            "Pay the invoice amount comfortably at the end of your selected deferred payment term"
+            "Once your application is approved, we’ll explain your financing plan, repayment schedule, and complete the necessary paperwork."
+        ],
+        buttonText: null,
+        infoBox: null
+    }, 
+    {
+        id: 5,
+        icon: CarIcon,
+        title: "Drive Away",
+        details: [
+            "Collect your vehicle and begin enjoying your new car while making affordable monthly payments."
         ],
         buttonText: null,
         infoBox: null

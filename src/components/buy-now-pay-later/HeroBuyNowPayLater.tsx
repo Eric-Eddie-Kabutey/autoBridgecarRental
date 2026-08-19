@@ -88,7 +88,7 @@ export default function HeroBuyNowPayLater() {
                         variants={itemVariants}
                         className="text-[14px] md:text-[15px] text-gray-200 mb-6 font-medium leading-relaxed max-w-md"
                     >
-                        Buy vehicles now – flexible payment terms of 30, 60, or 90 days.
+                        Buy vehicles now – flexible payment terms of 3, 6, or 9 or 12 months.
                     </motion.p>
 
                     {/* CTA Button */}

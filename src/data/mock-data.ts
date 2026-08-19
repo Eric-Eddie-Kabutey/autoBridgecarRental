@@ -8,8 +8,8 @@ export const MOCK_DATA = {
                 image: 'shen-liu-H2rb85HSrfo-unsplash.jpg'
             },
             intro: {
-                title: 'Explore The Gambia with Easy Car Rental',
-                summary: 'Get around with affordable, reliable cars and stress-free chauffeur services. We handle the details so you can focus on your trip.'
+                title: 'Enjoy driving your own car with Auto Bridge',
+                summary: 'Choose your car today and repay through flexible monthly installments that fit your budget.'
             },
             rental: {
                 title: 'Rent a Car in Minutes',
@@ -105,67 +105,58 @@ export const MOCK_DATA = {
     faqs: [
         {
             id: '1',
-            question: 'How can I pay at Easy Car Rental?',
+            question: 'What documents do I need to apply?',
             answer:
-                'We accept Visa, MasterCard, WAVE, cash, online banking, and crypto, so you can pay in the way that’s easiest for you.',
+                'A valid ID \nProof of Income \nProof of Address',
             category: 'General',
             order: 1,
             isActive: true
         },
         {
             id: '2',
-            question: 'Which cars can I rent from Easy Car Rental?',
+            question: 'How long does the approval process take?',
             answer:
-                'We offer a wide range of vehicles—from premium options to affordable economy cars. Every vehicle is fully insured, well-maintained, and inspected for reliability. Our support team is available 24/7, and you can browse our full catalog with no deposit required.',
+                'Our team reviews applications as quickly as possible. Processing times may vary depending on the information provided.',
             category: 'General',
             order: 2,
             isActive: true
         },
         {
             id: '3',
-            question: 'How can I modify or cancel my Easy Car Rental reservation?',
+            question: 'How can I choose a car?',
             answer:
-                'You can modify or cancel your reservation by contacting our customer service team. Changes should be made at least 48 hours before your booking. Requests made within 48 hours may incur additional fees.',
+                'Browse our available vehicles and choose the one that best suits your needs and budget, and send it to our whatsapp contact.',
             category: 'General',
             order: 3,
             isActive: true
         },
         {
             id: '4',
-            question: 'What are Easy Car Rental late return fees and policies?',
+            question: 'Can I pay off my loan early?',
             answer:
-                'Rentals are charged in 24-hour periods with a 1-hour grace period for returns. After 1 hour, hourly charges apply. If a vehicle is returned more than 3 hours late, a full-day charge applies. Optional items (protections, fees, add-ons, and equipment) are charged as a full day immediately if returned late.',
+                'Yes. Contact our team to discuss early repayment options and any applicable terms.',
             category: 'General',
             order: 4,
             isActive: true
         },
         {
             id: '5',
-            question: 'Does Easy Car Rental provide roadside assistance if I encounter issues with my rental car?',
+            question: 'What happens if I miss a payment?',
             answer:
-                'Yes. If you experience any issues, contact us immediately. For minor problems, our operations team can assist on-site. For major issues, we’ll arrange roadside assistance or provide a replacement vehicle when available. Please don’t abandon the vehicle—stay with it and wait for our team or the appropriate authorities. Our 24/7 support is here to keep you safe and moving.',
+                'Unable to make a payment? Contact us immediately. We’ll work with you to find the best possible solution.',
             category: 'General',
             order: 5,
             isActive: true
         },
         {
             id: '6',
-            question: 'How do I book a car rental with Easy Car Rental?',
+            question: 'How are monthly installments calculated?',
             answer:
-                'Booking is easy: visit easycarrentals.gm, choose your vehicle, and then call us on +220 7862550 or reach out to us on whatsapp to confirm. We offer reliable cars at great prices, with no deposit required*.',
+                'This depends on the vehicle price, your down payment, the repayment period, and the financing terms.',
             category: 'General',
             order: 6,
             isActive: true
-        },
-        {
-            id: '7',
-            question: 'Can I book multiple vehicles at once from Easy Car Rental?',
-            answer:
-                'Yes—you can book multiple vehicles at once. Select the cars you want and complete your booking, or contact our team and we’ll help you arrange everything quickly.',
-            category: 'General',
-            order: 7,
-            isActive: true
-        }
+        },        
     ],
 
 

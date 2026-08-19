@@ -12,17 +12,17 @@ export default function WhyUs({ dark = false }: WhyUsProps) {
     const features = [
         {
             icon: '/whyUs/cars.webp',
-            title: 'Affordable & Reliable Cars for Rent in Gambia',
+            title: 'Flexible payments',
             desc: 'Budget-friendly, dependable rentals perfect for family & business trips.'
         },
         {
             icon: '/whyUs/top-rating.webp',
-            title: 'Trusted Car Rental Service in Gambia',
+            title: 'Fast Approval',
             desc: 'We keep customers happy with reliable cars, fair pricing, and great support.'
         },
         {
             icon: '/whyUs/247-black.svg',
-            title: '24/7 Car Rentals Available in Gambia',
+            title: 'Trusted Service',
             desc: 'Fast booking and 24/7 assistance whenever you need help.'
         },
         {
@@ -37,7 +37,7 @@ export default function WhyUs({ dark = false }: WhyUsProps) {
         <section className={`py-24 ${dark ? 'bg-black' : 'bg-white'}`}>
             <div className="container mx-auto px-6">
                 <h3 className={`text-4xl md:text-5xl font-light capitalize text-center mb-20 ${dark ? 'text-white' : 'text-black'}`}>
-                    Why should you rent a car with us?
+                    Why choose AutoBridge?
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                     {features.map((feature, idx) => (

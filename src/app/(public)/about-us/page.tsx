@@ -14,11 +14,11 @@ export default function AboutUsPage() {
         <AboutUsHero />
         <AboutSection />
         <Founders />
-        <History />
+        {/* <History /> */}
         <Outlook />
-        <Investors />
+        {/* <Investors /> */}
         <TeamImageStrip />
-        <Clients />        
+        {/* <Clients />         */}
         <TestimonialCarousel />
         <CareersCTA />
     </>)

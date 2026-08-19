@@ -14,8 +14,8 @@ export default function BuyNowPayLater() {
         <HowItWorks />
         <PaymentTerms />
         <AfterPurchase />
-        <PaymentFlow />
-        <Eligibility />
-        <FAQ />
+        {/* <PaymentFlow /> */}
+        {/* <Eligibility /> */}
+        {/* <FAQ /> */}
     </>)
 }

@@ -43,11 +43,9 @@ export default function AboutUsHero() {
                         variants={itemVariants}
                         className="text-3xl md:text-4xl lg:text-[44px] font-black text-white uppercase tracking-tight mb-10 leading-[1.15]"
                     >
-                        One Platform. A<br />
-                        Profit Engine For<br />
-                        The European<br />
-                        Automotive<br />
-                        Industry
+                        ONE PLATFORM. TURNING<br />
+                        DREAMS OF CAR OWNERSHIP<br />
+                        INTO REALITY<br />                        
                     </motion.h1>
 
                     {/* CTA Button */}

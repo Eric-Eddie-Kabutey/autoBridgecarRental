@@ -19,7 +19,7 @@ interface FAQSectionProps {
 export default function FAQSection({
     faqs,
     title = "Frequently Asked Questions",
-    subtitle = "Got questions? We've got answers to help you navigate your rental experience in Gambia!"
+    subtitle = "What is the payment plan at Autobridge?"
 }: FAQSectionProps) {
     if (!faqs || faqs.length === 0) return null
 

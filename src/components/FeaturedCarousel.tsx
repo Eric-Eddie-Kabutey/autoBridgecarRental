@@ -59,7 +59,7 @@ export default function FeaturedCarousel({ vehicles }: FeaturedCarouselProps) {
 
                 <div className="flex justify-between items-end mb-12">
                     <h2 className="text-4xl md:text-5xl font-normal text-black">
-                        <span className="">Our Luxury Cars For Rent</span>
+                        <span className="">Cars for sale</span>
                     </h2>
                     <Link
                         href="/cars"

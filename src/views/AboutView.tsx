@@ -30,13 +30,15 @@ export default function AboutView({ brands, servicesData, faqs }: AboutViewProps
 
                 <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4">
                     <AnimateOnScroll animation="fade-in-up" delay={500}>
-                        <h1 className="text-5xl md:text-8xl font-light mb-6 tracking-tight uppercase max-w-5xl leading-tight">
-                            Best in Luxury Car <br className="hidden md:block" /> Rentals in Gambia
+                        <h1 className="text-4xl md:text-7xl font-light mb-6 tracking-tight uppercase max-w-5xl leading-tight">
+                            DRIVING DREAMS. <br className="hidden md:block" /> <span className='font-bold text-5xl md:text-8xl'>BUILDING TRUST.</span>
                         </h1>
                     </AnimateOnScroll>
                     <AnimateOnScroll animation="fade-in-up" delay={800}>
                         <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed">
-                            Luxury Rentals delivers premium luxury cars, and chauffeur services in Gambia. We're committed to providing unforgettable experiences that combine sophistication and reliability.
+                            At AutoBridge, we believe owning a car should be within everyone’s reach. We’re
+                            committed to making car ownership simple, affordable, and stress-free through flexible
+                            financing solutions designed around your needs. 
                         </p>
                     </AnimateOnScroll>
                 </div>
