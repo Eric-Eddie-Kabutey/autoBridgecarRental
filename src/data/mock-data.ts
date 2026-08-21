@@ -4,6 +4,7 @@ export const MOCK_DATA = {
         home: {
             hero: {
                 title: 'Affordable Car Rental & Chauffeur Services',
+                title: 'Affordable Car Rental & Chauffeur Services',
                 subtitle: 'Reliable vehicles and professional drivers—easy booking, fair prices, and smooth trips across The Gambia.',
                 image: 'shen-liu-H2rb85HSrfo-unsplash.jpg'
             },
@@ -116,7 +117,7 @@ export const MOCK_DATA = {
             question: 'What documents do I need to apply?',
             answer: 'A valid ID \nProof of Income \nProof of Address',
             category: 'General',
-            order: 1,
+            order: 2,
             isActive: true
         },
         {
@@ -125,7 +126,7 @@ export const MOCK_DATA = {
             answer:
                 'Our team reviews applications as quickly as possible. Processing times may vary depending on the information provided.',
             category: 'General',
-            order: 2,
+            order: 3,
             isActive: true
         },
         {
@@ -134,7 +135,7 @@ export const MOCK_DATA = {
             answer:
                 'Browse our available vehicles and choose the one that best suits your needs and budget, and send it to our whatsapp contact.',
             category: 'General',
-            order: 3,
+            order: 4,
             isActive: true
         },
         {
@@ -143,7 +144,7 @@ export const MOCK_DATA = {
             answer:
                 'Yes. Contact our team to discuss early repayment options and any applicable terms.',
             category: 'General',
-            order: 4,
+            order: 5,
             isActive: true
         },
         {
@@ -152,7 +153,7 @@ export const MOCK_DATA = {
             answer:
                 'Unable to make a payment? Contact us immediately. We’ll work with you to find the best possible solution.',
             category: 'General',
-            order: 5,
+            order: 6,
             isActive: true
         },
         {
@@ -161,9 +162,36 @@ export const MOCK_DATA = {
             answer:
                 'This depends on the vehicle price, your down payment, the repayment period, and the financing terms.',
             category: 'General',
-            order: 6,
+            order: 7,
             isActive: true
-        },        
+        },    
+        {
+            id: '8',
+            question: 'What payment plans does AutoBridge offer?',
+            answer:
+                'AutoBridge offers flexible payment plans of 3, 6, 9, or 12 months, depending on the vehicle and applicable terms.',
+            category: 'General',
+            order: 8,
+            isActive: true
+        },    
+        {
+            id: '9',
+            question: 'Can I choose my preferred payment period?',
+            answer:
+                'Yes. You can choose from the available 3, 6, 9, or 12-month plans based on what works best for your budget and the terms of your purchase.',
+            category: 'General',
+            order: 9,
+            isActive: true
+        },  
+        {
+            id: '10',
+            question: 'Do I have to pay the same amount every month?',
+            answer:
+                'Your payment schedule will be explained clearly before you complete your purchase. The amount and timing of payments will depend on the plan you choose and the agreed terms.',
+            category: 'General',
+            order: 10,
+            isActive: true
+        },  
     ],
 
 
@@ -173,7 +201,7 @@ export const MOCK_DATA = {
             id: '1',
             brand: 'Volvo',
             model: 'XC60',
-            listingType: 'rent',
+            listingType: 'rent',            
             year: 2008,
             bodyType: 'SUV',
             fuelType: 'Diesel',
@@ -201,7 +229,7 @@ export const MOCK_DATA = {
             id: '2',
             brand: 'Volvo',
             model: 'XC90',
-            listingType: 'sale',
+            listingType: 'buy',
             year: 2009,
             bodyType: 'SUV',
             fuelType: 'Petrol',
@@ -229,7 +257,7 @@ export const MOCK_DATA = {
             id: '3',
             brand: 'Toyota',
             model: '4Runner',
-            listingType: 'rent',
+            listingType: 'rent',            
             year: 2022,
             bodyType: 'SUV',
             fuelType: 'Petrol',
@@ -257,7 +285,7 @@ export const MOCK_DATA = {
             id: '4',
             brand: 'Hyundai',
             model: 'Accent',
-            listingType: 'lease',
+            listingType: 'trade',
             year: 2011,
             bodyType: 'Sedan',
             fuelType: 'Petrol',
@@ -286,7 +314,7 @@ export const MOCK_DATA = {
             id: '5',
             brand: 'Genesis',
             model: 'Genesis',
-            listingType: 'sale',
+            listingType: 'buy',
             year: 2015,
             bodyType: 'Sedan',
             fuelType: 'Petrol',
@@ -315,7 +343,7 @@ export const MOCK_DATA = {
             id: '6',
             brand: 'Genesis',
             model: 'Genesis',
-            listingType: 'lease',
+            listingType: 'trade',
             year: 2019,
             bodyType: 'Sedan',
             fuelType: 'Petrol',
@@ -339,6 +367,7 @@ export const MOCK_DATA = {
             brand: 'Genesis',
             model: 'Genesis',
             listingType: 'rent',
+            
             year: 2021,
             bodyType: 'Sedan',
             fuelType: 'Petrol',
@@ -367,7 +396,7 @@ export const MOCK_DATA = {
             id: '8',
             brand: 'RAM',
             model: '1500',
-            listingType: 'sale',
+            listingType: 'buy',
             year: 2024,
             bodyType: 'Truck',
             fuelType: 'Petrol',
