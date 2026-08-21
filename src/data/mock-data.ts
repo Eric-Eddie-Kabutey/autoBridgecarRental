@@ -105,15 +105,22 @@ export const MOCK_DATA = {
     faqs: [
         {
             id: '1',
-            question: 'What documents do I need to apply?',
-            answer:
-                'A valid ID \nProof of Income \nProof of Address',
+            question: 'What is the payment plan at Autobridge?',
+            answer: 'You pay within the period of one year in installments (first deposit is the down payment, next deposit at 3m, 6m, 9m, final deposit at 12m) the amount is based on the cost plan agreed upon.',
             category: 'General',
             order: 1,
             isActive: true
         },
         {
             id: '2',
+            question: 'What documents do I need to apply?',
+            answer: 'A valid ID \nProof of Income \nProof of Address',
+            category: 'General',
+            order: 1,
+            isActive: true
+        },
+        {
+            id: '3',
             question: 'How long does the approval process take?',
             answer:
                 'Our team reviews applications as quickly as possible. Processing times may vary depending on the information provided.',
@@ -122,7 +129,7 @@ export const MOCK_DATA = {
             isActive: true
         },
         {
-            id: '3',
+            id: '4',
             question: 'How can I choose a car?',
             answer:
                 'Browse our available vehicles and choose the one that best suits your needs and budget, and send it to our whatsapp contact.',
@@ -131,7 +138,7 @@ export const MOCK_DATA = {
             isActive: true
         },
         {
-            id: '4',
+            id: '5',
             question: 'Can I pay off my loan early?',
             answer:
                 'Yes. Contact our team to discuss early repayment options and any applicable terms.',
@@ -140,7 +147,7 @@ export const MOCK_DATA = {
             isActive: true
         },
         {
-            id: '5',
+            id: '6',
             question: 'What happens if I miss a payment?',
             answer:
                 'Unable to make a payment? Contact us immediately. We’ll work with you to find the best possible solution.',
@@ -149,7 +156,7 @@ export const MOCK_DATA = {
             isActive: true
         },
         {
-            id: '6',
+            id: '7',
             question: 'How are monthly installments calculated?',
             answer:
                 'This depends on the vehicle price, your down payment, the repayment period, and the financing terms.',

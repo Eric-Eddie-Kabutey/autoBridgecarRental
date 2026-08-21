@@ -8,6 +8,7 @@ export const dynamic = 'force-dynamic'
 export default async function AboutPage() {
     // Fetch brands
     const brandsDir = path.join(process.cwd(), 'public', 'brands')
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let brands: any[] = []
 
     if (fs.existsSync(brandsDir)) {

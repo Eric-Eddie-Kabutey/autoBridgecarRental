@@ -44,8 +44,8 @@ export default function AboutSection() {
                     className="text-3xl md:text-4xl lg:text-[40px] text-black mb-8 md:mb-10 text-center tracking-tight"
                 >
                     {/* Note the font weight difference matching your design */}
-                    <span className="font-bold">What we do at</span> { " "}
-                    <span className="font-normal">AutoBridge</span>
+                    What we do at { "  "}
+                    <span className="font-bold">AutoBridge</span>
                 </motion.h2>
 
                 <motion.p
