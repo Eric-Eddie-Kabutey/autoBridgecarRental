@@ -51,27 +51,28 @@ export default function Investors() {
 
                 {/* 1. DK Telecom */}
                 <motion.div variants={itemVariants} className="flex justify-center group cursor-pointer">
-                    <div className="text-[#00B259] font-bold text-xl md:text-2xl tracking-[0.15em] uppercase group-hover:scale-105 transition-transform duration-300">
-                        DK Telecom
+                    <div className="flex flex-col items-center group-hover:scale-105 transition-transform duration-300">
+                        <p className="text-[#00B259] font-black text-4xl md:text-[44px] leading-none tracking-tighter">
+                            LIFT CREDIT
+                        </p>
                     </div>
                 </motion.div>
 
                 {/* 2. GT Bank */}
                 <motion.div variants={itemVariants} className="flex flex-col items-center justify-center group cursor-pointer">
                     <div className="flex flex-col items-center group-hover:scale-105 transition-transform duration-300">
-                        <div className="text-[#E32128] font-black text-4xl md:text-[44px] leading-none tracking-tighter">
-                            GT
-                        </div>
-                        <div className="text-[#E32128] font-bold text-[10px] md:text-[11px] tracking-[0.25em] mt-1 uppercase">
-                            Bank
-                        </div>
+                        <p className="text-[#E32128] font-black text-4xl md:text-[44px] leading-none tracking-tighter">
+                            TOURMATE
+                        </p>                        
                     </div>
                 </motion.div>
 
                 {/* 3. NAFA */}
                 <motion.div variants={itemVariants} className="flex justify-center group cursor-pointer">
-                    <div className="text-black font-serif font-bold text-2xl md:text-[28px] tracking-tight group-hover:scale-105 transition-transform duration-300">
-                        NAFA
+                    <div className="flex flex-col items-center group-hover:scale-105 transition-transform duration-300">
+                        <p className="text-black font-black text-4xl md:text-[44px] leading-none tracking-tighter">
+                            CODEPAY
+                        </p>
                     </div>
                 </motion.div>
 
@@ -79,30 +80,17 @@ export default function Investors() {
                 <motion.div variants={itemVariants} className="flex flex-col items-center justify-center group cursor-pointer">
                     <div className="flex flex-col items-center group-hover:scale-105 transition-transform duration-300">
                         {/* SVG approximation of the logo bars */}
-                        <svg width="42" height="18" viewBox="0 0 50 25" className="mb-1">
+                        {/* <svg width="42" height="18" viewBox="0 0 50 25" className="mb-1">
                             <path d="M12 25L18 0H24L18 25z M2 25L8 0H14L8 25z M22 25L28 0H34L28 25z M32 25L38 0H44L38 25z" fill="#C4D600" />
-                        </svg>
-                        <div className="text-black font-semibold text-base md:text-lg tracking-tight leading-none text-center">
-                            Housing Gambia
-                        </div>
-                    </div>
-                </motion.div>
+                        </svg> */}
+                        <div className="flex flex-col items-center group-hover:scale-105 transition-transform duration-300">
+                            <p className="text-[#C4D600] font-black text-4xl md:text-[44px] leading-none tracking-tighter">
+                                RICIA CARE
+                            </p>
 
-                {/* 5. Inside Trading */}
-                <motion.div variants={itemVariants} className="flex flex-col items-center justify-center group cursor-pointer">
-                    <div className="flex flex-col items-center w-full group-hover:scale-105 transition-transform duration-300">
-                        <div className="text-[#F37021] font-serif text-[22px] md:text-[26px] leading-none mb-1">
-                            INSIDE
-                        </div>
-                        <div className="flex items-center w-full gap-2">
-                            <div className="h-[1px] bg-gray-300 flex-1"></div>
-                            <div className="text-gray-400 text-[6px] md:text-[7px] tracking-[0.2em] font-medium whitespace-nowrap">
-                                TRADING
-                            </div>
-                            <div className="h-[1px] bg-gray-300 flex-1"></div>
                         </div>
                     </div>
-                </motion.div>
+                </motion.div>               
 
             </motion.div>
         </section>
