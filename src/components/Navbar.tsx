@@ -20,51 +20,43 @@ const navData = [
         dropdownData: {
             desktopLayout: 'buyers',
             sections: [
-                {
-                    heading: 'For Buyers',
-                    items: [
-                        { title: 'Purchaser Benefits', desc: '', href: '#' },
-                        { title: 'Transportation with CarOnSale', desc: 'Safe and fast vehicle transport', href: '#' },
-                        { title: 'Buy Now, Pay Later', desc: 'Flexible Payment Options for Your Car Purchase', href: '#' },
-                    ]
-                },
-                {
-                    heading: 'For Seller',
-                    items: [
-                        { title: 'Vehicle brands', desc: 'The CarOnSale used car guide', href: '#' },
-                        { title: 'Trade-ins', desc: 'Everything about trade-ins for dealers', href: '#' },
-                        { title: 'Buy leasing returns', desc: 'Everything about leasing returns for dealers', href: '#' },
-                        { title: 'Accident cars', desc: 'Everything about accident vehicles for dealers', href: '#' },
-                        { title: 'Glossary', desc: 'Everything about terms from the car trade', href: '#' },
-                    ]
-                }
+                // {
+                //     heading: 'For Buyers',
+                //     items: [
+                //         { title: 'Purchaser Benefits', desc: '', href: '#' },
+                //         { title: 'Transportation with CarOnSale', desc: 'Safe and fast vehicle transport', href: '#' },
+                //         { title: 'Buy Now, Pay Later', desc: 'Flexible Payment Options for Your Car Purchase', href: '#' },
+                //     ]
+                // },
+                // {
+                //     heading: 'For Seller',
+                //     items: [
+                //         { title: 'Vehicle brands', desc: 'The CarOnSale used car guide', href: '#' },
+                //         { title: 'Trade-ins', desc: 'Everything about trade-ins for dealers', href: '#' },
+                //         { title: 'Buy leasing returns', desc: 'Everything about leasing returns for dealers', href: '#' },
+                //         { title: 'Accident cars', desc: 'Everything about accident vehicles for dealers', href: '#' },
+                //         { title: 'Glossary', desc: 'Everything about terms from the car trade', href: '#' },
+                //     ]
+                // }
             ]
         }
     },
     {
-        name: 'OUR SERVICES',
+        name: 'FOR SELLERS',
         href: '#',
         hasDropdown: true,
         dropdownData: {
-            desktopLayout: 'buyers',
+            desktopLayout: 'sellers',
             sections: [
                 {
-                    heading: 'For Buyers',
+                    heading: 'For Sellers',
                     items: [
-                        { title: 'Vehicle Brands', desc: '', href: '/services' },
-                        { title: 'Purchaser Benefits', desc: '', href: '/services' },
-                        { title: 'Buy Now, Pay Later', desc: '', href: '/services' },
-                        { title: 'Rent', desc: '', href: '/services' },
+                        { title: 'Trade ins', desc: '', href: '#' },
+                        { title: 'Sell my car', desc: '', href: '#' },
+                        { title: 'Buy Now, Pay Later', desc: '', href: '#' },
+                        { title: 'Terms and Condition', desc: '', href: '#' },
                     ]
-                },
-                {
-                    heading: 'For Seller',
-                    items: [
-                        { title: 'Trade ins', desc: '', href: '/services' },
-                        { title: 'Sell my car', desc: '', href: '/services' },
-                        { title: 'Glossary', desc: '', href: '/services' },
-                    ]
-                }
+                },                
             ]
         }
     },
@@ -82,10 +74,9 @@ const navData = [
                         { title: 'Contact us', desc: 'Would you like to make a press inquiry?', href: '/contact' },
                         { title: 'Blog', desc: 'The CarOnSale Blog', href: '/blog' },
                         {
-                            title: 'Career', desc: 'Become part of our team! (everything under the nav bar career should come inside career when you click on it.) ', href: '#' },
+                            title: 'Career', desc: 'Become part of our team!', href: '#' },
                     ]
-                },
-               
+                },               
                 {
                     heading: 'Press',
                     theme: 'gray', // Triggers gray backgrounds and lines instead of yellow
