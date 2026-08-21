@@ -22,18 +22,20 @@ export default function HomeAbout() {
 
 
                         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center p-6 md:p-12">
-                            <span className="text-emerald-500 text-sm font-bold uppercase tracking-[0.3em] mb-6">
-                                About Easy Car Rental
+                            <span className="text-emerald-500 text-sm font-bold uppercase tracking-[0.3em] mb-6 md:mb-8">
+                                About AutoBridge
                             </span>
 
-                            <h2 className="text-4xl md:text-7xl font-light text-white uppercase mb-8 leading-tight">                                
-                                Affordable Cars for <br /> Sale  in the Gambia
+                            <h2 className="text-white uppercase mb-8 md:mb-10 leading-tight">  
+                                <span className='text-3xl md:text-6xl font-light max-w-xl mb-[4px]'>DRIVING DREAMS.</span>
+                                <br /> 
+                                <span className='text-4xl md:text-7xl font-bold'>BUILDING TRUST.</span>
                             </h2>
 
                             <p className="text-gray-200 text-sm md:text-lg font-light max-w-3xl mb-10 leading-relaxed">
-                                At Easy Car Rental, we make car hire simple, affordable, and stress-free.
-                                Our vehicles are reliable, well-maintained, and ready for both family trips and business travel.
-                                With real attention to detail and friendly support, we focus on getting you on the road quickly and safely—every time.
+                                At AutoBridge, we believe owning a car should be within everyone’s reach. We’re
+                                committed to making car ownership simple, affordable, and stress-free through flexible
+                                financing solutions designed around your needs.
                             </p>
 
                             <Link
