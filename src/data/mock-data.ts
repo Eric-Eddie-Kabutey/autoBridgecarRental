@@ -3,8 +3,7 @@ export const MOCK_DATA = {
     pageContent: {
         home: {
             hero: {
-                title: 'Affordable Car Rental & Chauffeur Services',
-                title: 'Affordable Car Rental & Chauffeur Services',
+                title: 'Affordable Car Rental & Chauffeur Services',                
                 subtitle: 'Reliable vehicles and professional drivers—easy booking, fair prices, and smooth trips across The Gambia.',
                 image: 'shen-liu-H2rb85HSrfo-unsplash.jpg'
             },
