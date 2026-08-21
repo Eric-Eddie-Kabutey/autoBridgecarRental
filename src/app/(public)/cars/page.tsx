@@ -40,7 +40,7 @@ function CarsContent() {
         const fuelType = searchParams.get('fuelType')
         const seats = searchParams.get('seats')
 
-        if (category && [ 'rent', 'sale', 'lease' ].includes(category.toLowerCase())) {
+        if (category && [ 'rent', 'buy', 'trade' ].includes(category.toLowerCase())) {
             setActiveCategory(category.toLowerCase())
         }
         if (search) setSearchTerm(search)
@@ -78,7 +78,7 @@ function CarsContent() {
     useEffect(() => {
         let result = [ ...vehicles ]
 
-        // 1. Filter by Category (Rent, Sale, Lease)
+        // 1. Filter by Category (Rent, buy, trade)
         if (activeCategory) {
             result = result.filter(v => v.listingType?.toLowerCase() === activeCategory)
         }
@@ -322,13 +322,13 @@ function CarsContent() {
 
                         {/* Top Category Tabs */}
                         <div className="flex bg-gray-200/60 p-1.5 rounded-xl mb-6 w-full max-w-lg">
-                            {[ 'Rent', 'Sale', 'Lease' ].map((tab) => {
+                            {[ 'rent', 'buy', 'trade' ].map((tab) => {
                                 const isActive = activeCategory === tab.toLowerCase()
                                 return (
                                     <button
                                         key={tab}
                                         onClick={() => setActiveCategory(tab.toLowerCase())}
-                                        className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all duration-200 ${isActive
+                                        className={`flex-1 py-2.5 text-sm capitalize font-bold rounded-lg transition-all duration-200 ${isActive
                                                 ? 'bg-white text-black shadow-sm'
                                                 : 'text-gray-500 hover:text-gray-900 hover:bg-gray-200/50'
                                             }`}
