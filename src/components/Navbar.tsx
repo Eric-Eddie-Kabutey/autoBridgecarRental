@@ -14,38 +14,20 @@ import { ContentService } from '@/services/content-service'
 // 1. CENTRALIZED DATA ARCHITECTURE
 // ==========================================
 const navData = [
-    {
-        name: 'BUY NOW - PAY LATER',
-        href: '/buy-now-pay-later',
-        hasDropdown: true,
-        dropdownData: {
-            desktopLayout: 'buyers',
-            sections: [
-                // {
-                //     heading: 'For Buyers',
-                //     items: [
-                //         { title: 'Purchaser Benefits', desc: '', href: '#' },
-                //         { title: 'Transportation with CarOnSale', desc: 'Safe and fast vehicle transport', href: '#' },
-                //         { title: 'Buy Now, Pay Later', desc: 'Flexible Payment Options for Your Car Purchase', href: '#' },
-                //     ]
-                // },
-                // {
-                //     heading: 'For Seller',
-                //     items: [
-                //         { title: 'Vehicle brands', desc: 'The CarOnSale used car guide', href: '#' },
-                //         { title: 'Trade-ins', desc: 'Everything about trade-ins for dealers', href: '#' },
-                //         { title: 'Buy leasing returns', desc: 'Everything about leasing returns for dealers', href: '#' },
-                //         { title: 'Accident cars', desc: 'Everything about accident vehicles for dealers', href: '#' },
-                //         { title: 'Glossary', desc: 'Everything about terms from the car trade', href: '#' },
-                //     ]
-                // }
-            ]
-        }
-    },
+    // {
+    //     name: 'BUY NOW - PAY LATER',
+    //     href: '/buy-now-pay-later',
+    //     hasDropdown: false,
+    //     dropdownData: {
+    //         desktopLayout: 'buyers',
+    //         sections: [                
+    //         ]
+    //     }
+    // },
     {
         name: 'FOR SELLERS',
         href: '#',
-        hasDropdown: true,
+        hasDropdown: false,
         dropdownData: {
             desktopLayout: 'sellers',
             sections: [
