@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Logo from '@/components/Logo'
+import LogoDefault from './logoDefault'
 import { Menu, X, ChevronDown, ChevronRight, Globe } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ContentService } from '@/services/content-service'
@@ -209,7 +210,11 @@ export default function Navbar() {
         >
             <div className="container mx-auto px-6 h-20 md:h-24 flex items-center justify-between relative z-50">
                 <div className="shrink-0 flex items-center">
-                    <Logo />
+                    {/* Whenever a logo for AUTODRIDGE used: the LOGO  */}
+                    {/* <Logo /> */}
+
+                    {/* Using default for now */}
+                    <LogoDefault height={65} />
                 </div>
 
                 {/* --- DESKTOP MENU LINKS --- */}
