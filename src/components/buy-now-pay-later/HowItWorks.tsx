@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Lock, Trophy, ClipboardCheck, CarFront, CheckCircle2, CarIcon } from "lucide-react";
+import { Car, FileUser, CircleDollarSign, Handshake, CheckCircle2, CarFront } from "lucide-react";
 
 // --- Data-Driven Architecture ---
 // We store standard JSX in the data object to easily handle bolding specific text 
@@ -10,7 +10,7 @@ import { Lock, Trophy, ClipboardCheck, CarFront, CheckCircle2, CarIcon } from "l
 const stepsData = [
     {
         id: 1,
-        icon: Lock,
+        icon: Car,
         title: "Browse Our Cars",
         details: [
             'Explore our range of quality vehicles and choose the one that best fits your needs and budget.'
@@ -24,7 +24,7 @@ const stepsData = [
     },
     {
         id: 2,
-        icon: Trophy,
+        icon: FileUser,
         title: "Submit Your Application",
         details: [
             "Complete our simple online application form and provide the required information and supporting documents"
@@ -34,7 +34,7 @@ const stepsData = [
     },
     {
         id: 3,
-        icon: ClipboardCheck,
+        icon: CircleDollarSign,
         title: "Application Review",
         details: [
             "Our team will carefully review your application and contact you if any additional information is needed"
@@ -44,7 +44,7 @@ const stepsData = [
     },
     {
         id: 4,
-        icon: CarFront,
+        icon: Handshake,
         title: "Approval & Agreement",
         details: [
             "Once your application is approved, we’ll explain your financing plan, repayment schedule, and complete the necessary paperwork."
@@ -54,7 +54,7 @@ const stepsData = [
     }, 
     {
         id: 5,
-        icon: CarIcon,
+        icon: CarFront,
         title: "Drive Away",
         details: [
             "Collect your vehicle and begin enjoying your new car while making affordable monthly payments."
