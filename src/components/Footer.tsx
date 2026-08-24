@@ -58,7 +58,7 @@ export default async function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm gap-4">
-                    <p>&copy; {new Date().getFullYear()}, All Rights Reserved By Easy Car Rentals</p>
+                    <p>&copy; {new Date().getFullYear()}, All Rights Reserved By AutoBridge</p>
                     <p>Design and Developed By <span className="text-gray-300"><a href="https://codersclutch.com" target="_blank">CODERSCLUTCH</a></span></p>
                 </div>
             </div>
