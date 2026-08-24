@@ -19,7 +19,7 @@ export default function AboutUsPage() {
         {/* <Investors /> */}
         <TeamImageStrip />
         {/* <Clients />         */}
-        <TestimonialCarousel />
+        {/* <TestimonialCarousel /> */}
         <CareersCTA />
     </>)
 }
