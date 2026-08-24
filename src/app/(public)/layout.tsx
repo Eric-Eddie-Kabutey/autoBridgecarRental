@@ -10,7 +10,7 @@ const redHat = Red_Hat_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'EasyCarRentals | Reliable Car Rental',
+  title: 'AutoBridge | Reliable Car Rental',
   description: 'Rent the world\'s most affordable and reliable cars in Gambia.',
 }
 
