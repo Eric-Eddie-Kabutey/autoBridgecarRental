@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Logo from '@/components/Logo'
 import { Instagram, Youtube, Facebook, MessageCircle } from 'lucide-react'
 import { ContentService } from '@/services/content-service'
+import LogoDefault from './logoDefault'
 
 export default async function Footer() {
     const links = await ContentService.getSocialLinks();
@@ -19,7 +20,11 @@ export default async function Footer() {
                 <div className="text-center md:text-left grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     {/* Logo Column */}
                     <div className="flex flex-col justify-center items-center md:items-start gap-6">
-                        <Logo />
+                        {/* Whenever a logo for AUTODRIDGE used: the LOGO  */}
+                            {/* <Logo /> */}
+        
+                            {/* Using default for now */}
+                            <LogoDefault height={65} />
                     </div>
 
                     {/* Company Column */}
