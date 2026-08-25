@@ -14,16 +14,16 @@ import { ContentService } from '@/services/content-service'
 // 1. CENTRALIZED DATA ARCHITECTURE
 // ==========================================
 const navData = [
-    // {
-    //     name: 'BUY NOW - PAY LATER',
-    //     href: '/buy-now-pay-later',
-    //     hasDropdown: false,
-    //     dropdownData: {
-    //         desktopLayout: 'buyers',
-    //         sections: [                
-    //         ]
-    //     }
-    // },
+    {
+        name: 'BUY NOW - PAY LATER',
+        href: '/buy-now-pay-later',
+        hasDropdown: false,
+        dropdownData: {
+            desktopLayout: 'buyers',
+            sections: [                
+            ]
+        }
+    },
     {
         name: 'FOR SELLERS',
         href: '#',
@@ -45,8 +45,8 @@ const navData = [
     },
     {
         name: 'ABOUT US',
-        href: '#',
-        hasDropdown: true,
+        href: '/about-us',
+        hasDropdown: false,
         dropdownData: {
             desktopLayout: 'about',
             sections: [
@@ -55,7 +55,7 @@ const navData = [
                     items: [
                         { title: 'About us', desc: 'Find out more about CarOnSale!', href: '/about-us' },
                         { title: 'Contact us', desc: 'Would you like to make a press inquiry?', href: '/contact' },
-                        { title: 'Blog', desc: 'The CarOnSale Blog', href: '/blog' },
+                        // { title: 'Blog', desc: 'The CarOnSale Blog', href: '/blog' },
                         {
                             title: 'Career', desc: 'Become part of our team!', href: '#' },
                     ]
