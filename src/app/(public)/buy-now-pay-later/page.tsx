@@ -6,6 +6,7 @@ import HeroBuyNowPayLater from "@/components/buy-now-pay-later/HeroBuyNowPayLate
 import HowItWorks from "@/components/buy-now-pay-later/HowItWorks";
 import PaymentFlow from "@/components/buy-now-pay-later/PaymentFlow";
 import PaymentTerms from "@/components/buy-now-pay-later/PaymentTerms";
+import TradeInCTA from "@/components/shared/trade-in-cta";
 
 export default function BuyNowPayLater() {
     return (<>
@@ -14,6 +15,7 @@ export default function BuyNowPayLater() {
         <HowItWorks />
         <PaymentTerms />
         <AfterPurchase />
+        <TradeInCTA />
         {/* <PaymentFlow /> */}
         {/* <Eligibility /> */}
         {/* <FAQ /> */}
