@@ -26,7 +26,7 @@ const navData = [
     },
     {
         name: 'FOR SELLERS',
-        href: '#',
+        href: '/for-seller',
         hasDropdown: false,
         dropdownData: {
             desktopLayout: 'sellers',
