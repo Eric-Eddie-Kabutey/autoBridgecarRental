@@ -1,69 +1,118 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
 
-export default function SellerHero() {
+import React from "react";
+import { motion, Variants } from "framer-motion";
+import { Button } from "@/components/ui/button";
+
+export default function HeroBuyNowPayLater() {
+
+    const containerVariants: Variants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.2,
+            },
+        },
+    };
+
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    };
+
     return (
-        <section className="relative w-full bg-black text-white overflow-hidden">
-            {/* Background Decor (Optional Subtle Glow) */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FFCC00] opacity-[0.03] blur-[120px] rounded-full -mr-48 " />
+        // font-[family-name:var(--font-redhat)] enforces your typography
+        // min-h-[90vh] ensures it takes up most of the screen while allowing the user to peek at the next section
+        <section className="relative w-full min-h-[95vh] pt-36 flex items-center bg-black font-[family-name:var(--font-redhat)] overflow-hidden">
 
-            <div className="container mx-auto px-6 lg:px-12  md:pt-54 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* 
+        --- BACKGROUND IMAGE & GRADIENTS ---
+        We position the image absolutely on the right side.
+        The gradients ensure the text on the left remains perfectly readable by fading to black.
+      */}
+            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                {/* Desktop Gradient: Fades from solid black on the left, to transparent on the right */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10 w-full md:w-3/4 lg:w-2/3" />
 
-                    {/* Left Content */}
-                    <div className="flex flex-col items-start">
-                        {/* Tagline */}
-                        <p className="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.3em] mb-6">
-                            For Sellers <span className="text-gray-600 mx-2">•</span> B2B Marketing
-                        </p>
+                {/* Mobile Gradient: Additional bottom-to-top fade to ensure text readability on small screens where things stack */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10 md:hidden" />
 
-                        {/* Main Heading */}
-                        <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
-                            Sell your car <br />
-                            <span className="text-[#FFCC00]">at top price</span>
-                        </h1>
+                {/* The Car Image */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    className="absolute right-0 top-0 h-full w-full md:w-[55%] lg:w-[55%]"
+                >
+                    {/* I've sourced a high-quality, dark Mercedes image similar to your mockup */}
+                    <img
+                        src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2000&auto=format&fit=crop"
+                        alt="Dark luxury car front"
+                        className="w-full h-full object-cover object-center md:object-right"
+                    />
+                </motion.div>
+            </div>
 
-                        {/* Description */}
-                        <p className="text-lg md:text-lg font-medium max-w-lg opacity-80 mb-10 leading-snug">
-                            From vehicle collection to B2B marketing — reach over 30,000 verified dealers
-                            across Europe and sell your vehicles in record time.
-                        </p>
+            {/* 
+        --- FOREGROUND CONTENT --- 
+        Relative positioning with z-20 brings it above the background image and gradients.
+        pt-32 ensures it clears your fixed Navbar.
+      */}
+            <div className="container relative z-20 mx-auto px-6 md:px-12 pt-46 pb-20">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="max-w-xl flex flex-col items-start"
+                >
+                    {/* Pre-heading */}
+                    <motion.span
+                        variants={itemVariants}
+                        className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white mb-4 block"
+                    >
+                        SELL YOUR CAR WITH AUTOBRIDGE
+                    </motion.span>
 
-                        {/* Primary Action */}
-                        <Link
-                            href="/sell-now"
-                            className="bg-[#FFCC00] text-black px-12 py-4 rounded-xl font-black text-xl hover:bg-[#E6B800] transition-all hover:scale-105 active:scale-95 shadow-xl"
+                    {/* Main Heading */}
+                    <motion.h1
+                        variants={itemVariants}
+                        className="text-3xl md:text-4xl lg:text-[46px] font-black text-white uppercase tracking-tight mb-6 leading-[1.1]"
+                    >
+                        Get a fair price. <br /> Get a simple process.
+                    </motion.h1>
+
+                    {/* Subheading */}
+                    <motion.p
+                        variants={itemVariants}
+                        className="text-[14px] md:text-[15px] text-gray-200 mb-6 font-medium leading-relaxed max-w-md"
+                    >
+                        Looking to sell your car or upgrade to another vehicle? AutoBridge makes it simple. Tell us about your vehicle, and our team will assess it and guide you through the next steps.
+                    </motion.p>
+
+                    {/* CTA Button */}
+                    <motion.div variants={itemVariants} className="mb-6">
+                        <Button
+                            size="lg"
+                            className="bg-[#FFCC00] hover:bg-[#e6b800] text-black font-bold px-8 py-6 rounded-md text-[14px] transition-all duration-300 shadow-[0_0_15px_rgba(255,204,0,0.15)] hover:shadow-[0_0_25px_rgba(255,204,0,0.3)]"
                         >
                             Sell Now
-                        </Link>
+                        </Button>
+                    </motion.div>
 
-                        {/* Fine Print / Requirements */}
-                        <p className="mt-16 text-xs md:text-sm text-gray-500 max-w-md leading-relaxed border-t border-white/10 pt-6">
-                            Requirements include a company registered in the EU or UK,
-                            valid VAT identification, and a completed activation for the
-                            &quot;Seller Auction Platform.&quot;
-                        </p>
-                    </div>
+                    {/* Fine Print / Requirements */}
+                    <motion.p
+                        variants={itemVariants}
+                        className="text-[9px] md:text-[10px] text-gray-400 leading-[1.6] max-w-sm font-medium"
+                    >
+                        Want to trade in your current car? <br />
+                        You may be able to use the value of your current vehicle toward another car available through AutoBridge.
+                    </motion.p>
 
-                    {/* Right Image Container */}
-                    <div className="relative group">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-[#FFCC00] to-transparent opacity-20 blur rounded-2xl group-hover:opacity-30 transition duration-1000"></div>
-                        <div className="relative h-[400px] md:h-[600px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                            <Image
-                                src="/vehicles/buy-now-pay-later-hero-bg.avif"
-                                alt="Professional car sales environment"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                priority
-                            />
-                            {/* Dark overlay to match design theme */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                        </div>
-                    </div>
-
-                </div>
+                </motion.div>
             </div>
+
         </section>
     );
 }
