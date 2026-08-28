@@ -8,27 +8,27 @@ import { Badge } from "@/components/ui/badge";
 const paymentTerms = [
     {
         days: "Down payment",
-        description: "Ideal for quick resales",
+        description: "",
         isPopular: false,
     },
     {
-        days: "Month 3",
-        description: "Enough time to resell",
+        days: "3-month plan",
+        description: "",
         isPopular: false,
     },
     {
-        days: "6th month",
-        description: "Enough time to resell",
+        days: "6-month plan",
+        description: "",
         isPopular: false,
     },
     {
-        days: "9th month",
-        description: "Enough time to resell",
+        days: "9-month plan",
+        description: "",
         isPopular: false,
     },
     {
-        days: "Final deposit at month 12",
-        description: "Maximum flexibility for larger inventories",
+        days: "12-month plan",
+        description: "",
         isPopular: false,
     },
 ];
@@ -86,7 +86,7 @@ export default function PaymentTerms() {
                                 </div>
 
                                 {/* Text Content */}
-                                <h3 className="text-xl font-extrabold text-slate-900 mb-3">
+                                <h3 className="text-xl font-semibold text-slate-900 mb-3">
                                     {term.days}
                                 </h3>
                                 <p className="text-sm text-slate-500 font-medium max-w-[200px] leading-relaxed">
